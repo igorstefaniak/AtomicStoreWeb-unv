@@ -27,5 +27,5 @@ odpowiednimi bibliotekami.
 **AtomicStore** to aplikacja webowa wspierająca nowoczesne podejście do rozwoju.
 
 ## Autor
-**Igor Stefaniak**
-**Karolina Stefaniak**
+- **Igor Stefaniak**
+- **Karolina Stefaniak**
