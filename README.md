@@ -28,4 +28,4 @@ odpowiednimi bibliotekami.
 
 ## Autor
 - **Igor Stefaniak**
-- **Karolina Stefaniak**
+- **Karolina Wrzalik**
