@@ -13,9 +13,9 @@ const ProductForm = () => {
 
     const handleAdd = async () => {
         try {
-            await addProduct(newProduct); // Wait for addUser to complete
+            await addProduct(newProduct);
             setNewProduct({ name: '', description: '', price: 0, stock: 0, image: '' });
-            fetchProducts(); // Fetch the updated list of users immediately after
+            fetchProducts();
         } catch (error) {
         }
     };
