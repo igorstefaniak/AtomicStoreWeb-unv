@@ -16,8 +16,6 @@ odpowiednimi bibliotekami.
 
 ## Narzędzia używane w projekcie
 
-- **JEST** – Biblioteka do testowania aplikacji napisanych w JavaScript. Stosowana głównie do testów jednostkowych i integracyjnych.
-- **Cypress** – Framework testowy umożliwiający testowanie E2E w przeglądarce, co pozwala na testy w warunkach zbliżonych do rzeczywistych.
 - **Vite** – Szybkie i nowoczesne narzędzie do budowania aplikacji frontendowych, zapewniające szybsze uruchamianie projektu oraz wsparcie dla najnowszych standardów JavaScript.
 - **ESLint** – Narzędzie do statycznej analizy kodu, pomagające w wykrywaniu problemów i utrzymaniu dobrych praktyk programistycznych.
 
