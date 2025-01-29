@@ -22,7 +22,7 @@ const ProductForm = () => {
 
     return (
         <div>
-            <h2>Dodaj nowy produkt</h2>
+            <h3>Dodaj nowy produkt</h3>
             <table border="1">
                 <thead>
                     <tr>

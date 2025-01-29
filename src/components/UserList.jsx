@@ -14,10 +14,10 @@ const UserList = ({ isAdmin, username }) => {
         <>
             {isAdmin ? (
                 <div>
-                    <h2>Lista Użytkowników</h2>
+                    <h3>Lista Użytkowników</h3>
                     <button onClick={fetchUsers}>Odśwież</button>
                     {users.length === 0 ? (
-                        <p color='red'>Brak użytkowników!</p>
+                        <p style={{color:'red'}}>Brak użytkowników!</p>
                     ) : (
                         <table border="1">
                             <thead>

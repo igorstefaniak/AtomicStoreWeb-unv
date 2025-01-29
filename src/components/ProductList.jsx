@@ -12,7 +12,7 @@ const ProductList = ({ isAdmin }) => {
 
     return (
         <div>
-            <h2>Lista Produktów</h2>
+            <h3>Lista Produktów</h3>
             <button onClick={fetchProducts}>Odśwież</button>
             {products.length === 0 ? (
                 <p>Brak produktów!</p>

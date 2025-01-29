@@ -39,7 +39,8 @@ export const UserProvider = ({ children }) => {
     const deleteUser = (id) => {
         axios
             .delete(`http://localhost:8080/api/private/admin/user/${id}`, authHeader)
-            .then(() => setUsers((prev) => prev.filter((p) => p.orderId !== id)));
+            .then(() => setUsers((prev) => prev.filter((p) => p.orderId !== id)),
+            fetchProducts());
     };
 
 
