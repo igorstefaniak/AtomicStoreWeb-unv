@@ -13,6 +13,7 @@ const UserRow = ({ user, isAdmin, username }) => {
             fetchUsers();
         }
         catch (error) {
+            console.error("Błąd podczas aktualizowania użytkownika:", error);
         }
     };
     const handleDelete = async () => {
@@ -20,6 +21,7 @@ const UserRow = ({ user, isAdmin, username }) => {
             await deleteUser(user.userId);
             fetchUsers();
         } catch (error) {
+            console.error("Błąd podczas usuwania użytkownika:", error);
         }
     };
 
