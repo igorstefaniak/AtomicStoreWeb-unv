@@ -37,7 +37,7 @@ const UserList = ({ isAdmin, username }) => {
                         </table>
                     )}
                 </div>
-            ) : (<div>Brak uprawnień</div>)}</>);
+            ) : (<div style={{color:'red'}}>Brak uprawnień</div>)}</>);
 
 };
 

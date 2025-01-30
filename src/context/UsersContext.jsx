@@ -43,7 +43,6 @@ export const UserProvider = ({ children }) => {
             fetchProducts());
     };
 
-
     return (
         <UserContext.Provider
             value={{
