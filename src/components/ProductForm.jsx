@@ -17,6 +17,7 @@ const ProductForm = () => {
             setNewProduct({ name: '', description: '', price: 0, stock: 0, image: '' });
             fetchProducts();
         } catch (error) {
+            console.error('Błąd przy dodawaniu produktu:', error);
         }
     };
 
