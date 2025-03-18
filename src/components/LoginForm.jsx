@@ -9,7 +9,7 @@ const LoginForm = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/public/user/login', {
+            const response = await axios.get('http://localhost:8080/api/public/user/login', { //hehe jaki get co tam sie odjaniepawliło XD powinien być post
                 params: { username, password },
             });
 
