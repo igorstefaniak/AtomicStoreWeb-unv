@@ -1,12 +1,21 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [loggedIn, setLoggedIn] = useState(false);
-    const [isAdmin, setIsAdmin] = useState(false);
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    // Inicjalizacja stanu na podstawie danych z sessionStorage
+    const [loggedIn, setLoggedIn] = useState(() => sessionStorage.getItem('loggedIn') === 'true');
+    const [isAdmin, setIsAdmin] = useState(() => sessionStorage.getItem('isAdmin') === 'true');
+    const [username, setUsername] = useState(() => sessionStorage.getItem('username') || '');
+    const [password, setPassword] = useState(() => sessionStorage.getItem('password') || '');
+
+    // Zapis do sessionStorage przy każdej zmianie stanu
+    useEffect(() => {
+        sessionStorage.setItem('loggedIn', loggedIn);
+        sessionStorage.setItem('isAdmin', isAdmin);
+        sessionStorage.setItem('username', username);
+        sessionStorage.setItem('password', password);
+    }, [loggedIn, isAdmin, username, password]);
 
     const authHeader = {
         headers: {
@@ -26,6 +35,11 @@ export const AuthProvider = ({ children }) => {
         setIsAdmin(false);
         setUsername('');
         setPassword('');
+        // Czyszczenie danych sesji
+        sessionStorage.removeItem('loggedIn');
+        sessionStorage.removeItem('isAdmin');
+        sessionStorage.removeItem('username');
+        sessionStorage.removeItem('password');
     };
 
     return (
